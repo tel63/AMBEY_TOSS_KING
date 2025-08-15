@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="icon" type="image/png" sizes="32x32" href="logo.jpg">
+      <title>AMBEY TOSS KING</title>
+   <style>
+    @keyframes btnAnimation {
+      0% {
+        background-position: 0 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0 50%;
+      }
+    }
+
+    .tetegrambtn {
+      background:blue;
+      background-size: 300% 300%;
+      animation: btnAnimation 5s ease infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .tetegrambtn:hover {
+      transform: scale(1.2);
+    } 
+    #countdown{
+        animation: scalediv 2s linear infinite;
+    }
+    @keyframes scalediv {
+        0%,100%{
+            transform: scale(1);
+        }50%{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 6px 8px blue;
+        }
+        
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 font-sans antialiased">
+  <!-- Hero Section -->
+  <div class="relative h-screen flex items-center justify-center bg-cover bg-center"
+    style="background-image: url('logo.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-90"></div>
+    <div class="relative text-center text-white max-w-2xl px-6">
+      <img src="logo.jpg" alt="Profile Image"
+        class="mx-auto w-32 h-32  border-4 border-gray-800 rounded-full shadow-lg">
+      <h1 class="mt-4 text-3xl font-extrabold sm:text-5xl">AMBEY TOSS KING</h1>
+      <p class="mt-2 text-xl font-semibold text-yellow-300">😍 Khelo CPL Hamare Sath 😍</p>
+      <div class="grid place-items-center"><div class="text-3xl rounded-full text-white font-sans w-28  h-28 grid place-items-center  text-center border-white border-4 mt-4 shadow-red-600 shadow-lg font-bold" id="countdown">30</div></div>
+    
+      <div class="mt-2 space-y-2">
+        <p class="text-lg font-semibold">☝️ 👑 KING OF CRICKET PREDICTION 👑 ☝️</p>
+         <div class=" ">
+           <p class="text-lg font-semibold">BBL 44/43 Pass </p>
+           <p class="text-lg font-semibold">2023 CPL 74/72 Pass </p>
+        <p class="text-lg font-semibold">T20 World Cup 55/54 Match Pass </p>
+      </div>
+        <div class="mt-6">
+        <a href="https://t.me/+FpXpT5L35fwyNDll" >
+          <button
+            class="tetegrambtn px-6 py-3 rounded-lg text-lg font-bold text-white  shadow-lg hover:scale-110 border-4 border-black " style="box-shadow: 0px 0px 2px 6px blue;">
+            <i class="fab fa-telegram mr-2"></i> SUBSCRIBE FREE AMBEY TOSS KING CHANNEL
+          </button>
+        </a>
+      </div>
+        </div>
+      <div class="mt-6 bg-white text-red-600 px-4 py-2 rounded-lg font-bold">
+        ✅ JOIN FREE TELEGRAM CHANNEL
+      </div>
+    </div>
+  </div>
+  <script>
+    let timeLeft = 30; // Countdown start value
+    const countdownElement = document.getElementById('countdown');
+
+    const countdownTimer = setInterval(() => {
+        countdownElement.textContent = timeLeft; // Update the display
+        timeLeft -= 1;
+
+        if (timeLeft < 0) {
+           timeLeft=30;
+            }
+    }, 1000); // Update every 1 second
+
+
+    document.addEventListener('contextmenu', function (e) {
+    e.preventDefault(); // Prevent the default right-click menu
+    // alert('Right-click is disabled on this webpage.');
+});
+
+document.addEventListener("keydown", function(event) {
+        // Check if Ctrl key is pressed along with 'U'
+        if (event.ctrlKey && event.key === "u") {
+            event.preventDefault(); // Prevent the default action
+            // alert("View source is disabled!"); // Optional alert message
+        }
+    });
+</script>
+</body>
+
+</html>
